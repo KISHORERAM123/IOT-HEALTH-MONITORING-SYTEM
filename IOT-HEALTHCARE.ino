@@ -47,7 +47,7 @@ void setup()
   particleSensor.setup(); //Configure sensor with default settings
   particleSensor.setPulseAmplitudeRed(0x0A); //Turn Red LED to low to indicate sensor is running
   particleSensor.setPulseAmplitudeGreen(0); //Turn off Green LED
-  particleSensor.enableDIETEMPRDY();
+  particleSensor.enableDIETEMPRDY(); //Enable the temp ready interrupt. This is required.
 
   WiFi.begin(ssid, password); //connect to wifi network
   ThingSpeak.begin(client);
